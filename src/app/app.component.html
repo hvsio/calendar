@@ -1,0 +1,18 @@
+<html id="main">
+<body>
+<mat-tab-group mat-stretch-tabs>
+  <mat-tab  routerLink='/day' label="DAY"> <div class="idk"> <app-day> </app-day> </div> </mat-tab>
+  <mat-tab routerLink='/week' label="WEEK"> <div> <app-week> </app-week> </div> </mat-tab>
+  <mat-tab label="MONTH"> <app-month> </app-month> </mat-tab>
+  <mat-tab label="#TODOs"> <app-todos> </app-todos> </mat-tab>
+  <mat-tab label="Stories"> <app-stories> </app-stories> </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Profile
+      <img src="../assets/img/profile.JPG">
+    </ng-template>
+    <app-profile> </app-profile>
+  </mat-tab>
+</mat-tab-group>
+</body>
+</html>

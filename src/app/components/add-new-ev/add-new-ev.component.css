@@ -1,0 +1,64 @@
+.frame {
+  background-color: var(--color-medium-grey);
+  border-radius: 30px;
+  height: 30%;
+  width: 30%;
+  margin: 5%;
+}
+
+div {
+  padding: 5%;
+}
+
+mat-icon {
+  color: var(--color-grey-icons);
+}
+
+mat-form-field, .fields {
+  background-color: transparent;
+  width: 90%;
+  height: 10%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+}
+
+form {
+  width: 100%;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  margin: 2% auto 0%;
+  background-color: var(--color-light-grey-btn-background);
+
+}
+
+.schema {
+  display: inline-table;
+  width: 100%;
+}
+
+h1, mat-form-field {
+  justify-content: center;
+  display: flex;
+}
+
+ngb-timepicker, .text {
+  display: inline-flex;
+  justify-content: center;
+  padding: auto;
+  width: 30%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: var(--color-outlines) !important;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: var(--color-outlines) !important;
+}

@@ -1,0 +1,23 @@
+<body class="frame">
+  <div>
+    <h1>Create an event</h1>
+    <form>
+    <mat-form-field class="fields" appearance="outline">
+      <input name="event-name" type="text" matInput placeholder="Name of the event">
+    </mat-form-field>
+    </form>
+  <section class="schema">
+    <p class="text">FROM:</p>
+    <p class="text">TO:</p>
+  </section>
+  <section class="schema">
+    <ngb-timepicker [(ngModel)]="startTime"></ngb-timepicker>
+
+    <ngb-timepicker [(ngModel)]="endTime"></ngb-timepicker>
+  </section>
+  <br>
+    <button mat-flat-button> <mat-icon>add</mat-icon></button>
+  </div>
+
+</body>
+
