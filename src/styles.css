@@ -1,14 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~bootstrap/dist/css/bootstrap.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
 
-html, body {height: 100%; }
-html {
-  background-image: url("./assets/img/Background.svg");
+html, body {
+  height: 100%;
+  font-family: 'main', "Helvetica Neue", sans-serif !important;
 }
 
+body {
+  margin: 0;
+  background: url("./assets/img/Background.svg") no-repeat center center fixed;
+  background-size: cover;
+}
 
-
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 :root {
   --color-toolbar: #807297;
   --color-outlines: #4F4E4E;
@@ -18,22 +21,23 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   --color-red: #DC3D62;
 }
 
-.mat-tab-group {
-  height: 100px;
-}
-
 .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
   background-color: black;
   height: 3px;
 }
+
+.mat-tab-body-wrapper {
+  height: 100vh;
+}
+
 .mat-tab-label {
   background-color: #807297;
   color: black;
 }
 
-img {
-  border-radius: 50%;
-  width: 25%;
-  height: 25%;
-  padding: 5%;
+@font-face {
+  font-family: main;
+  src: url(assets/fonts/nevis.ttf) format("opentype");
 }
+
+

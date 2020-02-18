@@ -1,15 +1,16 @@
-export class CalendarEvent {
-  title: string;
-  start: Date;
-  end: Date;
-  color: string;
-  draggable: boolean;
+import {NgbTimeStruct} from '@ng-bootstrap/ng-bootstrap';
 
-  constructor(title = 'event', start, end, color) {
+export class CalendarEvent {
+  name: string;
+  start: NgbTimeStruct;
+  end: NgbTimeStruct;
+  category: string;
+
+  constructor(name = 'event', start, end, category) {
+    this.name = name;
     this.start = start;
     this.end = end;
-    this.color = color;
-    this.title = title;
+    this.category = category;
   }
 
 }

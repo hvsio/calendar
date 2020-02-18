@@ -1,7 +1,54 @@
-.new-event {
-  width: 30%;
-  height: 50%;
-
+.grid {
+  display: grid;
+  height: 90vh;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10% 70% 20%;
 }
 
-body { width: 100%;}
+h2 {
+  text-align: center;
+  margin: auto auto auto 0;
+  display: block;
+}
+
+.selection-btn {
+  display: block;
+  margin: auto 3% auto auto;
+  background-color: var(--color-light-grey-btn-background);
+}
+
+mat-form-field {
+  margin: auto;
+  display: block;
+}
+
+
+.selection {
+grid-row-start: 1;
+grid-row-end: 1;
+}
+
+.calendar {
+grid-column: 2;
+grid-row-start: 2;
+grid-row-end: 3;
+}
+
+.new-event {
+  padding: 5vh 8vw;
+}
+
+
+div {
+height: 100%;
+width: 100%;
+}
+
+app-add-new-ev {
+  margin: auto;
+  display: block;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: transparent;
+}

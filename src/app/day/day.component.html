@@ -1,4 +1,18 @@
-<body>
-  <app-add-new-ev class="new-event"> </app-add-new-ev>
-</body>
+<div class="grid">
+  <section class="selection">
+    <mat-form-field hidden>
+      <input matInput [matDatepicker]="picker" hidden (dateInput)="addEvent('input', $event)">
+      <mat-datepicker touchUi #picker></mat-datepicker>
+      <button mat-fab class="selection-btn" (click)="picker.open()"> <mat-icon svgIcon='calendar'></mat-icon> </button>
+    </mat-form-field>
+
+  </section>
+  <h2> {{day | date}} </h2>
+  <section class="new-event">
+    <app-add-new-ev> </app-add-new-ev>
+  </section>
+  <section class="calendar"> calendar</section>
+  <section class="goals"> goals</section>
+
+</div>
 

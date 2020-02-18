@@ -6,9 +6,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CalendarComponent } from './calendar/calendar.component';
 import {
   MatToolbarModule, MatGridListModule, MatButtonModule,
-  MatTabsModule, MatInputModule, MatDatepickerModule, MatSelectModule
+  MatTabsModule, MatInputModule, MatDatepickerModule, MatSelectModule, MatSnackBarModule
 } from '@angular/material';
-import { AngularSvgIconModule } from 'angular-svg-icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes} from '@angular/router';
 import { DAYComponent } from './day/day.component';
@@ -23,6 +22,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material';
 import {MatNativeDateModule} from '@angular/material';
 import {MatIconModule} from '@angular/material';
+import { AngularSvgIconModule } from 'angular-svg-icon';
+import { HttpClientModule } from '@angular/common/http';
+import { GoalsComponent } from './goals/goals.component';
 
 const routes: Routes = [
   {path: 'day', component: DAYComponent },
@@ -46,9 +48,13 @@ const routes: Routes = [
     TodosComponent,
     StoriesComponent,
     ProfileComponent,
-    AddNewEvComponent
+    AddNewEvComponent,
+    GoalsComponent
   ],
   imports: [
+    HttpClientModule,
+    AngularSvgIconModule,
+    MatSnackBarModule,
     ReactiveFormsModule,
     NgbModule,
     FormsModule,
