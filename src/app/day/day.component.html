@@ -1,18 +1,18 @@
 <div class="grid">
   <section class="selection">
     <mat-form-field hidden>
-      <input matInput [matDatepicker]="picker" hidden (dateInput)="addEvent('input', $event)">
+      <input matInput [matDatepicker]="picker" hidden (dateInput)="changeDay('input', $event)">
       <mat-datepicker touchUi #picker></mat-datepicker>
       <button mat-fab class="selection-btn" (click)="picker.open()"> <mat-icon svgIcon='calendar'></mat-icon> </button>
     </mat-form-field>
 
   </section>
-  <h2> {{day | date}} </h2>
+  <h1> {{Day | date}} </h1>
   <section class="new-event">
-    <app-add-new-ev> </app-add-new-ev>
+    <app-add-new-ev [day]="myDate"> </app-add-new-ev>
   </section>
   <section class="calendar"> calendar</section>
-  <section class="goals"> goals</section>
+  <section class="goals"> <app-goals></app-goals> </section>
 
 </div>
 

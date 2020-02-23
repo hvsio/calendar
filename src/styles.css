@@ -15,9 +15,11 @@ body {
 :root {
   --color-toolbar: #807297;
   --color-outlines: #4F4E4E;
+  --color-dark-grey: #979696;
   --color-medium-grey: #CDCDCD;
   --color-grey-icons: #8F8F8F;
   --color-light-grey-btn-background: #EAEAEA;
+  --color-lightest-grey: #eeeeee;
   --color-red: #DC3D62;
 }
 

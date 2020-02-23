@@ -1,0 +1,65 @@
+main {
+  background-color: var(--color-medium-grey);
+  border-radius: 30px;
+  text-align: center;
+  padding-top: 1vh;
+  margin-bottom: 5%;
+  font-family: 'main', "Helvetica Neue", sans-serif !important;
+}
+
+.buttons {
+  display: flex;
+}
+
+.list, .input {
+  background-color: var(--color-medium-grey);
+}
+
+.fields {
+  width: 90%;
+  background-color: transparent;
+  display: block;
+  margin-left: 8%;
+  margin-right: 0;
+  margin-top: 5%;
+  font-family: 'main', "Helvetica Neue", sans-serif !important;
+}
+
+.input {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  font-family: 'main', "Helvetica Neue", sans-serif !important;
+}
+
+.mat-button {
+  display: block;
+  margin: auto;
+  background-color: var(--color-light-grey-btn-background);
+  font-family: 'main', "Helvetica Neue", sans-serif !important;
+}
+
+::ng-deep .nav-tabs.nav-justified > li > a {
+  color: black;
+}
+
+::ng-deep ngb-tab {
+  border: 3px;
+  border-color: black;
+}
+
+mat-icon {
+  color: var(--color-grey-icons);
+}
+
+h2 {
+  justify-content: center;
+  display: flex;
+  padding-bottom: 1vh;
+  font-family: 'main', "Helvetica Neue", sans-serif !important;
+}
+
+button {
+  font-family: 'main', "Helvetica Neue", sans-serif !important;
+}

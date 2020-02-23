@@ -2,10 +2,11 @@
   display: grid;
   height: 90vh;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 10% 70% 20%;
+  grid-template-rows: 10% 60% auto;
+
 }
 
-h2 {
+h1 {
   text-align: center;
   margin: auto auto auto 0;
   display: block;
@@ -38,6 +39,9 @@ grid-row-end: 3;
   padding: 5vh 8vw;
 }
 
+.goals {
+  padding: 0 5vw;
+}
 
 div {
 height: 100%;

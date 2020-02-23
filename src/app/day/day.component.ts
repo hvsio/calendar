@@ -1,9 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, Input, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {EventServiceService} from '../event-service.service';
-import {SvgIconRegistryService} from 'angular-svg-icon';
 import {MatDatepickerInputEvent, MatIconRegistry} from '@angular/material';
 import {DomSanitizer} from '@angular/platform-browser';
+import {AddNewEvComponent} from '../components/add-new-ev/add-new-ev.component';
+import {DatePipe, formatDate} from '@angular/common';
 
 @Component({
   selector: 'app-day',
@@ -14,26 +15,28 @@ export class DAYComponent implements OnInit {
 
   routing: any;
   list: any[];
-  day: any = Date.now();
+  Day: Date = new Date();
+  myDate: string;
+  pipe = new DatePipe('en-GB');
 
   getDay(day: any) {
     console.log(day);
   }
 
-  addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
-    console.log(event.value);
-    this.day = event.value;
+  changeDay(type: string, event: MatDatepickerInputEvent<Date>) {
+    this.Day = event.value;
+    this.myDate = this.pipe.transform(this.Day, 'dd/MM/yyyy');
+    console.log(this.myDate);
   }
 
-  constructor(private route: ActivatedRoute, private data: EventServiceService, private iconReg: MatIconRegistry, private dom: DomSanitizer) {
+  constructor(private route: ActivatedRoute,
+              private data: EventServiceService,
+              private iconReg: MatIconRegistry,
+              private dom: DomSanitizer) {
     this.iconReg.addSvgIcon('calendar', this.dom.bypassSecurityTrustResourceUrl('../assets/img/calendar.svg'));
   }
 
   ngOnInit() {
-    this.routing = this.route.params.subscribe(p => {
-      console.log(p);
-    });
-
     this.data.getEvents(events => {
       this.list = events;
     });

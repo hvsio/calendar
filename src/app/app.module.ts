@@ -5,8 +5,18 @@ import { AppComponent } from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CalendarComponent } from './calendar/calendar.component';
 import {
-  MatToolbarModule, MatGridListModule, MatButtonModule,
-  MatTabsModule, MatInputModule, MatDatepickerModule, MatSelectModule, MatSnackBarModule
+  MatToolbarModule,
+  MatGridListModule,
+  MatButtonModule,
+  MatTabsModule,
+  MatInputModule,
+  MatDatepickerModule,
+  MatSelectModule,
+  MatSnackBarModule,
+  MatTreeModule,
+  MatCheckboxModule,
+  MatListModule,
+  MatChipsModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes} from '@angular/router';
@@ -24,7 +34,7 @@ import {MatNativeDateModule} from '@angular/material';
 import {MatIconModule} from '@angular/material';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { HttpClientModule } from '@angular/common/http';
-import { GoalsComponent } from './goals/goals.component';
+import { GoalsComponent } from './components/goals/goals.component';
 
 const routes: Routes = [
   {path: 'day', component: DAYComponent },
@@ -75,6 +85,10 @@ const routes: Routes = [
     MatNativeDateModule,
     MatSelectModule,
     MatIconModule,
+    MatTreeModule,
+    MatCheckboxModule,
+    MatListModule,
+    MatChipsModule,
 
   ],
   providers: [],

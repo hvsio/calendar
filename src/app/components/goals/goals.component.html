@@ -1,0 +1,22 @@
+<main>
+  <h2 style="font-size:1vw;">goals</h2>
+  <div class="lists">
+    <section class="buttons">
+      <button (click)="saveCategory('life')" mat-button>life</button>
+      <button (click)="saveCategory('university')" mat-button>university</button>
+      <button (click)="saveCategory('project')" mat-button>project</button>
+      <button (click)="saveCategory('work')" mat-button>work</button>
+    </section>
+    <mat-action-list role="list">
+      <button mat-list-item role="listitem" *ngFor="let itemik of list"> {{itemik.valueOf()}}</button>
+    </mat-action-list>
+    <section class="input">
+      <form>
+        <mat-form-field class="fields" appearance="outline">
+          <input name="goal-name" #name type="text" matInput placeholder="add new goal">
+        </mat-form-field>
+      </form>
+      <button mat-button (click)="addGoal(category, name.value)"> <mat-icon>add</mat-icon> </button>
+    </section>
+  </div>
+</main>
