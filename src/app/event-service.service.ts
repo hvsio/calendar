@@ -1,13 +1,14 @@
 import {Injectable} from '@angular/core';
 import {CalendarEvent} from './models/calendarEvent';
 import {HttpClient} from '@angular/common/http';
+import {environment} from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EventServiceService {
 
-  private endpoint = 'http://localhost:4444';
+  private endpoint = environment.url;
 
   constructor(private http: HttpClient) {
   }
@@ -16,15 +17,15 @@ export class EventServiceService {
     this.http.get(`${this.endpoint}/events`)
       .subscribe(res => {
         console.log(res);
-        console.log(res);
         callback = res;
       }
     );
   }
 
-  getEvent(eventID: string, callback) {
-    this.http.get(`${this.endpoint}/events/${eventID}`)
+  getEventFromADay(day: string, callback) {
+    this.http.get(`${this.endpoint}/events/${day}`)
       .subscribe(response => {
+        console.log(response);
         callback(response);
       });
   }

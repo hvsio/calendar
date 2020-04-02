@@ -1,11 +1,11 @@
 <html id="main">
 <body>
 <mat-tab-group mat-stretch-tabs>
-  <mat-tab  routerLink='/day' label="DAY"> <div class="idk"> <app-day> </app-day> </div> </mat-tab>
+  <mat-tab  routerLink='/day' label="DAY"> <app-day> </app-day> </mat-tab>
   <mat-tab routerLink='/week' label="WEEK"> <div> <app-week> </app-week> </div> </mat-tab>
-  <mat-tab label="MONTH"> <app-month> </app-month> </mat-tab>
-  <mat-tab label="#TODOs"> <app-todos> </app-todos> </mat-tab>
-  <mat-tab label="Stories"> <app-stories> </app-stories> </mat-tab>
+  <mat-tab routerLink='/month' label="MONTH"> <app-month> </app-month> </mat-tab>
+  <mat-tab routerLink='/todo' label="#TODOs"> <app-todos> </app-todos> </mat-tab>
+  <mat-tab routerLink='/stories' label="Stories"> <app-stories> </app-stories> </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>
       Profile

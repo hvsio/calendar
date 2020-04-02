@@ -23,9 +23,13 @@ export class DAYComponent implements OnInit {
     console.log(day);
   }
 
+  transformDay(day: Date) {
+    this.myDate = this.pipe.transform(this.Day, 'dd.MM.yyyy');
+  }
+
   changeDay(type: string, event: MatDatepickerInputEvent<Date>) {
     this.Day = event.value;
-    this.myDate = this.pipe.transform(this.Day, 'dd/MM/yyyy');
+    this.transformDay(this.Day);
     console.log(this.myDate);
   }
 
@@ -37,7 +41,8 @@ export class DAYComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.data.getEvents(events => {
+    this.transformDay(this.Day);
+    this.data.getEventFromADay(this.myDate, events => {
       this.list = events;
     });
   }

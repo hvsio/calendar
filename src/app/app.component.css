@@ -7,6 +7,11 @@ img {
   padding: 5%;
 }
 
+::ng-deep .mat-tab-body.mat-tab-body-active {
+  overflow-y: hidden !important;
+}
+
+
 
 
 

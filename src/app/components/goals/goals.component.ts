@@ -17,7 +17,7 @@ export class GoalsComponent implements OnInit {
     [3, 'work'],
   ]);
 
-  list: string[] = ['lol', 'lmao', 'idk', 'idc'];
+  list: string[] = ['lol', 'lmao', 'idk', 'idc', 'kek'];
   category = 'life';
   goalsList: ToDo[];
 

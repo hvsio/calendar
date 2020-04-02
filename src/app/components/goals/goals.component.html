@@ -1,14 +1,16 @@
 <main>
-  <h2 style="font-size:1vw;">goals</h2>
+  <h2 style="font-size:1.5vw;">goals</h2>
   <div class="lists">
     <section class="buttons">
-      <button (click)="saveCategory('life')" mat-button>life</button>
-      <button (click)="saveCategory('university')" mat-button>university</button>
-      <button (click)="saveCategory('project')" mat-button>project</button>
-      <button (click)="saveCategory('work')" mat-button>work</button>
+      <button class="catBtn" (click)="saveCategory('life')" mat-button>life</button>
+      <button class="catBtn" (click)="saveCategory('university')" mat-button>university</button>
+      <button class="catBtn" (click)="saveCategory('project')" mat-button>project</button>
+      <button class="catBtn" (click)="saveCategory('work')" mat-button>work</button>
     </section>
     <mat-action-list role="list">
-      <button mat-list-item role="listitem" *ngFor="let itemik of list"> {{itemik.valueOf()}}</button>
+      <div id="scrollable">
+        <button id="goals" mat-list-item role="listitem" *ngFor="let itemik of list"> {{itemik.valueOf()}}</button>
+      </div>
     </mat-action-list>
     <section class="input">
       <form>
@@ -16,7 +18,9 @@
           <input name="goal-name" #name type="text" matInput placeholder="add new goal">
         </mat-form-field>
       </form>
-      <button mat-button (click)="addGoal(category, name.value)"> <mat-icon>add</mat-icon> </button>
+      <button id="addBtn" mat-button (click)="addGoal(category, name.value)">
+        <mat-icon>add</mat-icon>
+      </button>
     </section>
   </div>
 </main>

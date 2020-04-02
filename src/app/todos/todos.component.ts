@@ -10,8 +10,8 @@ export class TodosComponent implements OnInit {
 
   todosList: ToDo[];
 
-  toDo1 = new ToDo('Water plants', true);
-  toDo2 = new ToDo('IDK', false);
+  toDo1 = new ToDo('Water plants', true, null);
+  toDo2 = new ToDo('IDK', false, null);
 
 
   constructor() {

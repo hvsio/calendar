@@ -70,7 +70,7 @@ mat-form-field, .fields {
 h2 {
   justify-content: center;
   display: flex;
-  padding-bottom: 1vh;
+  padding-bottom: 3%;
 }
 
 mat-label {

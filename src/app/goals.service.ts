@@ -15,7 +15,6 @@ export class GoalsService {
     this.http.get(`${this.endpoint}/goals/${category}`)
       .subscribe(res => {
           console.log(res);
-          console.log(res);
           callback = res;
         }
       );

@@ -6,8 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  tabs = ['DAY', 'WEEK', 'MONTH', '#TODOs', 'Stories'];
+  tabs = ['DAY', 'WEEK', 'MONTH', '#TODOs', 'Stories', 'Profile'];
   activeTab = this.tabs[0];
   title = 'trial';
+
+
 
 }

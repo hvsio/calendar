@@ -1,51 +1,65 @@
 .grid {
   display: grid;
-  height: 90vh;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 10% 60% auto;
+  grid-template-rows: 13% auto auto;
+
+}
+
+.date {
 
 }
 
 h1 {
-  text-align: center;
-  margin: auto auto auto 0;
-  display: block;
+  display: flex;
+  /*text-align: center;*/
+  /*margin: auto auto auto 0;*/
+  /*display: block;*/
 }
 
 .selection-btn {
-  display: block;
-  margin: auto 3% auto auto;
   background-color: var(--color-light-grey-btn-background);
 }
 
 mat-form-field {
   margin: auto;
   display: block;
+  width: auto;
 }
 
 
 .selection {
-grid-row-start: 1;
-grid-row-end: 1;
+  display: block;
+  margin: auto;
+  font-size: 2vw;
+  grid-column: 1;
+  grid-row: 1;
+  height: fit-content;
 }
 
 .calendar {
-grid-column: 2;
-grid-row-start: 2;
-grid-row-end: 3;
+  grid-column: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 .new-event {
-  padding: 5vh 8vw;
+  padding: 5vh 5vw;
+  display: block;
+  grid-column: 1;
+  grid-row: 3;
 }
 
 .goals {
   padding: 0 5vw;
+  display: block;
+  grid-column: 1;
+  grid-row: 2;
+  height: fit-content;
 }
 
 div {
-height: 100%;
-width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 app-add-new-ev {
@@ -53,6 +67,32 @@ app-add-new-ev {
   display: block;
 }
 
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix {
+  padding: 0 0;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+
+
+
+.mat-form-field-flex {
+  display: block;
+  align-items: baseline;
+  box-sizing: border-box;
+  width: 30vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
   background-color: transparent;
 }
+
+::ng-deep .mat-form-field-infix {
+  width: auto !important;
+  padding: 0 0;
+  border: 0 !important;
+}
+

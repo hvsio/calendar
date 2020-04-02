@@ -3,20 +3,38 @@ main {
   border-radius: 30px;
   text-align: center;
   padding-top: 1vh;
-  margin-bottom: 5%;
+  height: fit-content;
+  width: auto;
   font-family: 'main', "Helvetica Neue", sans-serif !important;
 }
 
 .buttons {
   display: flex;
+  font-size: 1vw;
+  padding-right: 3vw;
+  padding-left: 3vw;
 }
 
-.list, .input {
+#goals {
+  font-size: 1vw;
+  padding-right: 3em;
+  padding-left: 3em;
+  height: 4vh;
+}
+
+mat-icon {
+  align-content: center;
+  vertical-align: middle;
+}
+
+.list {
+  font-size: 1vw;
   background-color: var(--color-medium-grey);
 }
 
 .fields {
   width: 90%;
+  font-size: 1vw;
   background-color: transparent;
   display: block;
   margin-left: 8%;
@@ -25,19 +43,33 @@ main {
   font-family: 'main', "Helvetica Neue", sans-serif !important;
 }
 
+.catBtn {
+  margin-right: 1em;
+  margin-left: 1em;
+  display: block;
+}
+
 .input {
+
   display: grid;
+  font-size: 1vw;
   grid-template-columns: 80% 20%;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
   font-family: 'main', "Helvetica Neue", sans-serif !important;
+  background-color: transparent;
 }
 
 .mat-button {
   display: block;
+  font-size: 1em;
   margin: auto;
   background-color: var(--color-light-grey-btn-background);
   font-family: 'main', "Helvetica Neue", sans-serif !important;
+}
+
+#scrollable {
+  height: 16vh;
+  overflow-y: auto;
+  margin-top: 1vw;
 }
 
 ::ng-deep .nav-tabs.nav-justified > li > a {
@@ -49,8 +81,14 @@ main {
   border-color: black;
 }
 
+input {
+  height: 1em;
+  font-size: 1em;
+}
+
 mat-icon {
   color: var(--color-grey-icons);
+  size: 0.5em;
 }
 
 h2 {
@@ -62,4 +100,13 @@ h2 {
 
 button {
   font-family: 'main', "Helvetica Neue", sans-serif !important;
+}
+
+.mat-list-item-content {
+  font-size: 1vw;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
+  font-size: 0.8vw;
+  height: 3em;
 }
